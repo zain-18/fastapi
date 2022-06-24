@@ -11,7 +11,7 @@ scaler=pickle.load(pickle_scaler)
 
 app=FastAPI()
 @app.get("/prediction")
- def get_prediction(gender,hypertension,heartdisease,married,employeed,glucose,bmi,smoking,age016,age1632,age3248,age4864,age64p):
+async def get_prediction(gender,hypertension,heartdisease,married,employeed,glucose,bmi,smoking,age016,age1632,age3248,age4864,age64p):
     Glucose_level=float(glucose)
     Bmi=float(bmi)
 
